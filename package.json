@@ -1,0 +1,45 @@
+{
+  "name": "express-static-encoding",
+  "version": "1.0.0",
+  "description": "The middleware for Express.js framework to control compression type by accept-encoding header",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ssch1337/express-static-encoding.git"
+  },
+  "keywords": [
+    "express",
+    "staticserver",
+    "express-static",
+    "accept",
+    "accept-encoding",
+    "encoding",
+    "static-encoding",
+    "http2",
+    "serverpush",
+    "static",
+    "brotli",
+    "zopfli",
+    "gzip"
+  ],
+  "author": "Sergey Scheglov",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ssch1337/express-static-encoding/issues"
+  },
+  "homepage": "https://github.com/ssch1337/express-static-encoding#readme",
+  "devDependencies": {
+    "@types/jest": "^26.0.24",
+    "express": "^4.17.1",
+    "ts-jest": "^27.0.4",
+    "typescript": "^4.3.5"
+  },
+  "dependencies": {
+    "serve-static": "^1.14.1"
+  }
+}

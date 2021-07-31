@@ -1,0 +1,14 @@
+# Dependency directory
+node_modules
+
+# Dependency tree
+package-lock.json
+
+# Compiled release
+lib
+
+# OSX files
+.DS_Store
+
+# VSCode files
+.vscode%

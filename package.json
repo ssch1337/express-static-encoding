@@ -2,8 +2,8 @@
   "name": "express-static-encoding",
   "version": "1.0.0",
   "description": "The middleware for Express.js framework to control compression type by accept-encoding header",
-  "main": "./index.js",
-  "types": "./index.d.ts",
+  "main": "./lib/index.js",
+  "types": "./lib/index.d.ts",
   "scripts": {
     "build": "tsc",
     "test": "jest"

@@ -1,0 +1,34 @@
+name: Publish
+
+on:
+  push:
+    tags:
+     - "*"
+  
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [16.x]
+    
+    - uses: actions/checkout@v2
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v1
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Build lib
+      run: |
+        npm install
+        npm run build
+    - name: Upload lib to release
+      uses: svenstaro/upload-release-action@v2
+      with:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
+        file: lib/${{ matrix.artifact_name }}
+        asset_name: ${{ matrix.asset_name }}A
+        overwrite: true
+        tag: ${{ github.ref }}
